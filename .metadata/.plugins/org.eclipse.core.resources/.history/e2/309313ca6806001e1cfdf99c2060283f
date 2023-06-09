@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import VoteBean.Member;
-import VoteBean.Vote;
 
 public class VoteDAO {
     Connection conn = null; //변수선언  DB와 연결
@@ -121,6 +120,7 @@ public class VoteDAO {
 
 	public String selectAll(HttpServletRequest request, HttpServletResponse response) {
 		// 투표 검사 조회 
+		public String selectAll(HttpServletRequest request, HttpServletResponse response){
 		 	
 			ArrayList<Vote> list = new ArrayList<Vote>();	
 			try {

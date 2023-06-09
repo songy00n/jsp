@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import VoteBean.Member;
-import VoteBean.Vote;
 
 public class VoteDAO {
     Connection conn = null; //변수선언  DB와 연결
@@ -120,51 +119,6 @@ public class VoteDAO {
 	}
 
 	public String selectAll(HttpServletRequest request, HttpServletResponse response) {
-		// 투표 검사 조회 
-		 	
-			ArrayList<Vote> list = new ArrayList<Vote>();	
-			try {
-			conn = getConnection();
-					
-				//투표검수조회 화면 쿼리
-			String sql = "SELECT v_name,";
-			       sql+= " '19'||substr(v_jumin,1,2)||";
-			       sql+= " '년'||substr(v_jumin,3,2)||";
-			       sql+= " '월'||substr(v_jumin,5,2)||";
-			       sql+= " '일생' v_jumin,";
-			       sql+= " '만 '||(to_number(to_char(sysdate,'yyyy'))";
-			       sql+= " - to_number('19'||substr(v_jumin,1,2)))||'세' v_age,";
-			       sql+= " DECODE(substr(v_jumin,7,1),'1','남','여') v_gender, ";		   
-			       sql+= " m_no, ";
-			       sql+= " substr(v_time,1,2)||':'||substr(v_time,3,2) v_time, ";
-			       sql+= " DECODE(v_confirm,'Y','확인','미확인') v_confirm ";
-			       sql+= " FROM tbl_vote_202005 ";
-			       sql+= " WHERE v_area='제1투표장'";
-			ps = conn.prepareStatement(sql); // 명령어를 보낸다.
-			rs = ps.executeQuery();
-				
-			while(rs.next()) {
-				Vote vote = new Vote();
-					
-				vote.setV_name(rs.getString(1));
-				vote.setV_jumin(rs.getString(2));
-				vote.setV_age(rs.getString(3));
-				vote.setV_gender(rs.getString(4));
-				vote.setM_no(rs.getString(5));
-				vote.setV_time(rs.getString(6));
-				vote.setV_confirm(rs.getString(7));
-				
-				list.add(vote);
-			}
-			request.setAttribute("list",list);
-			conn.close();
-			ps.close();
-			rs.close();
-				
-			} catch (Exception e) {
-				
-				e.printStackTrace();
-			}	
-			return "voteList.jsp";
+		return null;
 	}
 }

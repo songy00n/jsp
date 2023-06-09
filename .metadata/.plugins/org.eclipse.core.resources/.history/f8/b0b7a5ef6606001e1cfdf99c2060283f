@@ -5,7 +5,7 @@
  <%
    request.setCharacterEncoding("UTF-8");
    ArrayList<Member> list = new ArrayList<Member>();
-   list = (ArrayList<Member>) request.getAttribute("list"); // object니까 list로 다운캐스
+   list = (ArrayList<Member>) request.getAttribute("list");
  %>
 <!DOCTYPE html>
 <html>

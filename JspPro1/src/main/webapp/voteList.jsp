@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="VoteBean.Vote" %>
+
+<%
+request.setCharacterEncoding("UTF-8");
+//list 불러오기
+ArrayList<Vote> list = new ArrayList<Vote>();
+list = (ArrayList<Vote>)request.getAttribute("list");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +31,21 @@
 			<th>투표시간</th>
 			<th>유권자확인</th>
 		</tr>
+		<%
+		for(int i=0; i<list.size(); i++){
+		%>
+		<tr>
+			<td><%=list.get(i).getV_name() %></td>
+			<td><%=list.get(i).getV_jumin() %></td>
+			<td><%=list.get(i).getV_age() %></td>
+			<td><%=list.get(i).getV_gender() %></td>
+			<td><%=list.get(i).getM_no() %></td>
+			<td><%=list.get(i).getV_time() %></td>
+			<td><%=list.get(i).getV_confirm() %></td>
+		</tr>
+		<%
+		}
+		%>
 	</table>
 </div>
 </section>
