@@ -1,0 +1,9 @@
+package VoteBean;
+
+public class Member {
+	//	후보자 테이블
+	String m_no; //후보 번호
+	String m_name;
+	String p_name;
+
+}

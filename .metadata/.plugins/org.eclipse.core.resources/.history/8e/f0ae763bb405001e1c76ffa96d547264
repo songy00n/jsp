@@ -1,0 +1,73 @@
+package VoteDB;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class VoteController
+ * 컨트롤러의 역할:뷰랑 모델을 연결, 요청을 받아서 모델로 분기시킴
+ */
+@WebServlet("/VoteController")
+public class VoteController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public VoteController() {
+        super();
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		requestPro(request, response);
+	}
+
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		requestPro(request, response);
+	}
+	
+
+	private void requestPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 요청한 것을 받아서 모델 분기하기
+		// 뷰 보내기
+		String uri = request.getRequestURI(); // 요청한 브라우저의 URI값을 얻는다
+		String context = request.getContextPath(); //요청한 context 경로를 얻음
+		String command = uri.substring(context.length());
+		String site = null;
+		
+		System.out.println("uri: " + uri);
+		System.out.println("context" + context);
+		System.out.println("command" + command);
+		
+		VoteDAO vote = new VoteDAO();
+		
+		switch(command) {
+			case "/main.do": site="index.jsp"; break;
+			case "/memberList.do": site="memberList.jsp"; break;
+			case "/voteMember.do": site="voteMember.jsp"; break;
+			case "/voteList.do": site="voteList.jsp"; break;
+			case "/vote.do": 
+				 int result = vote.insertVote(request,response);
+			default: break;
+		}
+		RequestDispatcher dispatcher = request.getRequestDispatcher(site);
+		dispatcher.forward(request, response);
+	
+	}
+
+}

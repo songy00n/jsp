@@ -1,0 +1,5 @@
+package VoteBean;
+
+public class Vote {
+
+}

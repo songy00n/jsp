@@ -1,0 +1,6 @@
+package VoteBean;
+
+public class Vote {
+	// 변수선언==멤버변수==
+
+}

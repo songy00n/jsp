@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/Users/nsy/GitHub/jsp_study/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2224739814.index
+371438024.index
+3481090212.index
+1721993304.index
+3519467253.index
+924811282.index
+4272479946.index

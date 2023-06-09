@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> <!--  page directive - jsp문법 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지역구 의원 투표</title>
+</head>
+<body>
+
+</body>
+</html>

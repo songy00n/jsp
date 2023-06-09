@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>voteMember</title>
+</head>
+<body>
+<%@ include file="topmenu.jsp" %>
+<section>
+
+<h2>투표하기 </h2>
+<form name="frm" method="post" action="vote.do">
+	<div class="table">
+		<table>
+			<tr>
+				<th>주민번호</th>
+				<td>
+					<input type="text" name="v_jumin">
+				</td>
+			</tr>
+		</table>
+	</div>
+</form>
+
+</section>
+<%@ include file="footer.jsp" %>
+</body>
+</html>

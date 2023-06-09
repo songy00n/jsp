@@ -1,0 +1,6 @@
+package VoteBean;
+
+public class Vote {
+	// 변수선언==멤버변수==데이터베이스의 자료를 받아주고 담아서 넣어
+
+}

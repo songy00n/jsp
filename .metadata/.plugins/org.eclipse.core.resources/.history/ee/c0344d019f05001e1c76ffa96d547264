@@ -1,0 +1,17 @@
+package VoteDB;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class VoteDAO {
+	Connection conn = null; // 변수선언 DB와 연결 
+	PreparedStatement ps = null; // sql문 담당 
+	ResultSet rs = null; // select문에서 검색 결과를 담을 
+	
+	public static Connection getConnection() throws Exception {
+		Class.forName("oracle.jdbc.OracleDriver");
+	}
+	
+
+}

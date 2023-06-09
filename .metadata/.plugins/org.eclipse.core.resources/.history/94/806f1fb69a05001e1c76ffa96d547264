@@ -1,0 +1,14 @@
+package VoteBean;
+
+public class Vote {
+	// 변수선언==멤버변수==데이터베이스의 자료를 받아주고 담아서 넣어줌
+	// 주로 데이터베이스의 컬럼명과 동일하게 씀 자료형도 동일하게 씀
+	
+	String v_name;
+	String v_jumin;
+	String v_age;
+	String v_gender;
+	String m_no; // 후보 번호
+	String v_time; // 투표 시간
+	
+}

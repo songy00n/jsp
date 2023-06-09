@@ -1,0 +1,10 @@
+package VoteDB;
+
+public class VoteDAO {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package VoteDB;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class VoteDAO {
+	Connection conn = null;
+	PreparedStatement ps = null;
+	
+		
+	
+
+}
