@@ -11,9 +11,9 @@ some key aspects and concepts of JSP:
 
 3. JSP Tags: JSP pages utilize tags to encapsulate Java code and control the page's behavior. There are three types of tags in JSP:
 
-Directives: These are used to provide instructions to the JSP container during page translation and execution. For example, the <%@ page %> directive is used to define page-specific attributes.
-Declarations: Declarations are used to define variables and methods that can be accessed within the JSP page. They are typically placed outside the HTML template.
-Scriptlets and Expressions: Scriptlets (<% %>) allow the embedding of Java code directly within the HTML template. Expressions (<%= %>) are used to evaluate Java expressions and output their results directly into the HTML template.
+ Directives: These are used to provide instructions to the JSP container during page translation and execution. For example, the <%@ page %> directive is used to define page-specific attributes.
+ Declarations: Declarations are used to define variables and methods that can be accessed within the JSP page. They are typically placed outside the HTML template.
+ Scriptlets and Expressions: Scriptlets (<% %>) allow the embedding of Java code directly within the HTML template. Expressions (<%= %>) are used to evaluate Java expressions and output their results directly into the HTML template.
 
 4. Standard Actions: JSP provides a set of standard actions, which are XML-like tags used to perform common tasks such as including other files, looping over collections, conditionally displaying content, and forwarding requests to other resources. These actions simplify the development process by abstracting complex functionality into reusable components.
 
